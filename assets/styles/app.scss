@@ -1,0 +1,28 @@
+/* inject:imports */
+/* endinject */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: helvetica, sans-serif;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome !important;
+  font-size: 100% !important;
+}
+
+.fa-github {
+  display: inline-block;
+  margin-right: 10px !important;
+}
+
+.profile {
+  img {
+    max-width: 200px;
+    border-width: 1px !important;
+    border-radius: 50%;
+    box-shadow: none;
+  }
+
+  a {color: inherit !important;}
+}

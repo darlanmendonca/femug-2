@@ -1,0 +1,59 @@
+- Como aproveitar o Node.js no Desenvolvimento Front End
+- 1º O que é Node.js
+  - É um Event Driver com I/O não bloqueante
+  - Ele roda em C++
+  - Ele interpreta seu código Javascript (usando o V8 do Google),
+  - E tem acesso ao SO, por meio destes módulos em C++
+  - Mas você coda em Javascript
+  - É multiplataforma, roda em Windows, Linux, Mac
+
+- E o o que isto muda para desenvolvedores Frontend?
+  - 1º Consideremos o ambiente do Desenvolvedor Frontend
+  - Vc roda Javascript no Browser, logo, você fica restrito às API's que o Browser lhe oferece
+    - File System
+    - Application Cache
+    - SQL Lite
+    - Draggable
+    - Media Access (Camera/Web Cam)
+
+  - E com Node, nós temos acesso ao SO, isto significa
+    - full access a hardware
+    - e programando com o bom e velho Javascript
+    - outras vantagens que o Node tem trazido, é o constante amadurecimento da linguagem Javascript
+      - promises
+      - classes
+      - template block
+
+- Ta legal, posso fazer tudo, mas continuo sem idéias, o que posso fazer de útil agora que tenho a máquina acessível via Javascript
+  - Você com certeza já ouviu falar de algum destes
+    - Jade, EJS, Handlebars, Mustache
+    - Sass, Less, Stylus
+    - Coffeescript, Typescript
+    - Socket.io
+  - E talvez tenha ouvido falar destas também
+    - Cordova, Phonegap, Ionic
+    - NW (antigo node webkit)
+    - Johny Five
+  - Você pode procurar nesta lista (github node awesome)
+  - NPM | GitHub | Open Source
+    - Ferramentas que melhoram o workflow
+      - Jade
+      - Sass
+    - Ferramentas que se tornam indispensáveis
+      - Gulp / Grunt
+      - Browser-sync
+      - JSHint
+      - Sprite generators
+      - Concatenação e minificação, e compressão de arquivos
+      - Testes Unitários / Testes de Integração / Testes E2E
+      - Deploy automatizado
+      - Modularização
+
+- Ok, como começo?
+  - Se você já criou um package.json, ou rodou algum comando como npm install, você já está utilizando o Node para consumo próprio
+  - Mas o mais legal, é você criar seus módulos
+
+- Módulos
+  - É uma forma de centralizar uma ou mais funcionalidades, num único source
+  - Permite fácil atualização
+  - Permite distribuição open source, pública, ou privada.

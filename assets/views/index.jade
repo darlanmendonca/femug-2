@@ -1,0 +1,141 @@
+extends layouts/sample
+
+block content
+  .reveal
+    .slides
+      section
+        section.present
+          p Como aproveitar o <br>Node.js no Desenvolvimento Front End
+        section.profile
+          img(src='/imgs/darlanmendonca.png')
+          p 
+            i.fa.fa-github 
+            a(href='https://github.com/darlanmendonca', target='_blank') darlanmendonca
+          p Desenvolvedor Javascript
+      
+      section
+        section
+          p O que é Node.js?
+        section: ul
+          li É um Event Driver com I/O não bloqueante
+          li.fragment.fade-in Ele roda em C++
+          li.fragment.fade-in Ele interpreta seu código Javascript (usando o V8 do Google),
+          li.fragment.fade-in E tem acesso ao SO, por meio destes módulos em C++
+          li.fragment.fade-in Mas você coda em Javascript
+          li.fragment.fade-in É multiplataforma, roda em Windows, Linux, Mac
+      
+      section
+        section E o o que isto muda para desenvolvedores Frontend?
+        section Consideremos o ambiente do Desenvolvedor Frontend
+        section
+          p Vc roda Javascript no Browser, logo,<br> você fica restrito às API's que o Browser lhe oferece
+          br
+          ul
+            li.fragment.fade-in File System 
+            li.fragment.fade-in Application Cache
+            li.fragment.fade-in Local Storage
+            li.fragment.fade-in Draggable (Acesso a metadados)
+            li.fragment.fade-in User Media (Camera)
+      section
+        section Com Node, nós temos acesso ao SO, isto significa:
+        section 
+          ul
+            li full access ao hardware
+            li.fragment.fade-in e programando com o bom e velho Javascript
+        section
+          img(src="/imgs/freedom.jpg")
+      section
+        section 
+          p Ta legal, posso fazer tudo, mas continuo sem idéias. 
+          p.fragment.grow O que posso fazer de útil com tanta liberdade?
+        section
+          p Você com certeza já ouviu falar de algum destes
+          ul
+            li Jade, EJS, Handlebars
+            li Sass, Less, Stylus
+            li Coffeescript, Typescript
+        section
+          p E talvez tenha ouvido falar destas também
+          ul
+            li Cordova, Phonegap, Ionic
+            li NW (antigo node webkit)
+            li Johny Five
+            li Socket.io
+            li Moment
+
+        section
+          p Você pode procurar mais nesta lista (<a href="https://github.com/sindresorhus/awesome-nodejs" target="_blank">https://github.com/sindresorhus/awesome-nodejs</a>)
+
+      section
+        p Irá encontrar tudo aqui:
+        ul
+          li NPM
+          li Github
+          li Open Source
+
+      section
+        section Algumas ferramentas que melhoram o workflow
+        section
+          p Jade
+          img(src="/imgs/jade.png")
+        section
+          p Sass
+          img(src="/imgs/sass.png")
+
+      section
+        section
+          p Algumas ferramentas que melhoram o workflow
+          ul
+            li.fragment.fade-in Gulp, Grunt
+            li.fragment.fade-in Yeoman
+            li.fragment.fade-in Browser-sync
+            li.fragment.fade-in JSHint
+            li.fragment.fade-in Spritesmith
+            li.fragment.fade-in Concat, Uglify, Gzip
+            li.fragment.fade-in Mocha, Jasmine, Selenium
+        section
+          p Gulp
+          img(src="/imgs/gulp.png")
+        section
+          p Gulp Tasks
+          pre: code.
+            var gulp = require('gulp');
+            gulp.task('default', function() {
+              // things to do
+            });
+
+        section
+          p Gulp methods
+          pre: code.
+            gulp.src();
+            gulp.pipe();
+            gulp.dest();
+
+        section
+          p Gulp example
+          pre: code.
+            gulp
+              .src('./assets/scripts/**/*.js')
+              .pipe(sourcemaps.init())
+              .pipe(concat('vendor.js'))
+              .pipe(uglify())
+              .pipe(sourcemaps.write('.'))
+              .pipe(gulp.dest('./public/scripts'))
+              .pipe(browserSync.stream());
+      section
+        p Ok, como começo?
+        ul
+          li.fragment.fade-in Se você já criou um package.json
+          li.fragment.fade-in ou rodou algum comando como npm install
+
+      section
+        p Você já está usando o Node para consumo próprio
+        p.fragment.fade-in Mas o mais legal, é você criar seus módulos
+
+      section
+        p NPM Modules
+        ul
+          li.fragment.fade-in É uma forma de centralizar uma ou mais funcionalidades, num único source
+          li.fragment.fade-in Permite fácil atualização
+          li.fragment.fade-in Permite distribuição open source, pública, ou privada.
+
